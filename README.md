@@ -16,7 +16,7 @@
 ## Overview
 Simple-resume은 node.js와 yaml을 통해 편리하고 빠르게 HTML, PDF 형식으로 이력서를 작성 할 수 있습니다.
 <div align="middle">
-    <img src="https://github.com/suitelab/simple-resume/raw/master/public/static/profile-yaml.png" height="300px">
+    <img src="https://github.com/suitelab/simple-resume/raw/master/public/static/profile-yaml.png">
 </div>
 
 ## Getting Started
@@ -37,5 +37,5 @@ $ node app profile
 7. http://localhost:3000 에서 이력서를 확인하고 pdf 출력등의 방법으로 이력서를 생성합니다!
 
 <div align="middle">
-    <img src="https://github.com/suitelab/simple-resume/raw/master/public/static/to-pdf.png" height="300px">
+    <img src="https://github.com/suitelab/simple-resume/raw/master/public/static/to-pdf.png" >
 </div>
