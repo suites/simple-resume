@@ -1,0 +1,22 @@
+<section>
+    <div class="headline">
+    <h2><i class="fas fa-id-card"></i>License</h2>
+    </div>
+    <% for (const license of profile.licenses) { %>
+        <div class="other">
+        <h3><%= license.name %></h3>
+        <span class="role"><%= license.role %></span>
+        <span class="time">
+            <time datetime="<%= license.period.start %>">
+            <%= license.period.start %>
+            </time> -
+            <time datetime="<%= license.period.end %>">
+            <%= license.period.end %>
+            </time>
+        </span>
+        <p>
+            <%= license.description %>
+        </p>
+        </div>
+    <% } %>
+</section>

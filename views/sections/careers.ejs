@@ -1,0 +1,52 @@
+<section>
+<div class="headline">
+  <h2><i class="fas fa-briefcase"></i>Careers</h2>
+</div>
+<% for (const company of profile.careers) { %>
+  <div class="row">
+    <div class="row-left">
+      <h3><%= company.name %></h3>
+      <%= company.role %>
+      <span class="time">
+        <time datetime="<%= company.workPeriod.start %>">
+          <%= company.workPeriod.start %>
+        </time> -
+        <time datetime="<%= company.workPeriod.end %>">
+          <%= company.workPeriod.end %>
+        </time>
+      </span>
+    </div>
+    <div class="row-right">
+      <div class="tech-stack">
+        <h4>Tech Stacks</h4>
+        <ul>
+          <% for (const name in company.techStack) { %>
+            <li><%= name + ': ' + company.techStack[name].join(', '); %>
+          <% } %>
+        </ul>
+      </div>
+      <% for (const project of company.projects) { %>
+        <div class="project">
+          <h4><i class="fas fa-angle-right"></i><%= project.name %></h4>
+          <span class="time">
+            <time datetime="<%= project.period.start %>">
+              <%= project.period.start %>
+            </time> -
+            <time datetime="<%= project.period.end %>">
+              <%= project.period.end %>
+            </time>
+          </span>
+          <h5>Description</h5>
+          <p><%= project.description %></p>
+          <h5>What did I do</h5>
+          <ul>
+            <% for (const part of project.parts) { %>
+              <li><%= part %></li>
+            <% } %>
+          </ul>
+        </div>
+      <% } %>
+    </div>
+  </div>
+<% } %>
+</section>

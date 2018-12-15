@@ -1,0 +1,21 @@
+<section>
+      <div class="headline">
+        <h2><i class="fas fa-laptop-code"></i></i>Skills</h2>
+      </div>
+      <% for (var name in profile.skills){ %>
+        <div class="row skills">
+        <div class="row-left">
+          <h3><%= name %></h3>
+        </div>
+        <div class="row-right">
+          <div class="project">
+            <ul>
+        <% for (var obj of profile.skills[name]){ %>
+              <li><%= obj %></li>
+        <% } %>
+          </ul>
+          </div>
+        </div>
+      </div>
+      <% } %>
+    </section>

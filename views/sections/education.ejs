@@ -1,0 +1,21 @@
+<section>
+    <div class="headline">
+    <h2><i class="fas fa-university"></i>Education</h2>
+    </div>
+    <% for (const education of profile.educations) { %>
+        <div class="other">
+        <h3><%= education.name %></h3>
+        <span class="time">
+            <time datetime="<%= education.period.start %>">
+            <%= education.period.start %>
+            </time> -
+            <time datetime="<%= education.period.end %>">
+            <%= education.period.end %>
+            </time>
+        </span>
+        <p>
+            <%= education.description %>
+        </p>
+        </div>
+    <% } %>
+</section>

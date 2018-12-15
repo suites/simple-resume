@@ -1,0 +1,151 @@
+# Head config [views/partials/head.ejs]
+# Meta tag 관련 설정입니다.
+# Meta tag-related settings.
+blogUrl: http://example.com/resume
+description: This is a resume of software engineer John Doe.
+
+# Resume config [views/partials/profile.ejs]
+# 이력서 상단에 들어갈 사진과 이름, 간단 소개입니다.
+# A picture, name and brief introduction to the top of your resume.
+name: John Doe
+photo: "./images/profile-example.jpg"
+introduction: Hello! I'm John Doe. I'm Software Engineer. I enjoy playing games and eating. I'm happiest when I eat. I like pork.
+
+# Profile link config [views/sections/profile.ejs]
+# email, github, linkedin, blog의 주소와 아이콘 설정입니다.
+# The address and icon settings for email, github, linkedin, and blog.
+
+# name: 연결할 서비스의 주소입니다.
+# symbol: 링크 앞의 awesome font 심볼입니다. [https://fontawesome.com/icons/](ex : fab fa-apple)
+# type: 링크의 서비스명 입니다.
+
+# name: The address of the service to which you want to connect.
+# symbol: Awesome font symbol in front of the link. [https://fontawesome.com/icons/](ex : fab fa-apple)
+# type: This is the service name of the link.
+
+links:
+  - name: "john.doe@example.com"
+    symbol: fas fa-envelope
+    type: email
+  - name: "https://github.com/johndoe"
+    symbol: fab fa-github
+    type: github
+  - name: https://www.linkedin.com/in/johndoe
+    symbol: fas fab fa-linkedin
+    type: linkedin
+  - name: http://example.com
+    symbol: fas fa-home
+    type: blog
+
+# Skills config [views/sections/skills.ejs]
+# 보유기술 설정입니다. 항목을 자유롭게 추가할 수 있습니다.
+
+# This is a technology setting. You can add items freely.
+skills:
+  Languages:
+    - Node.js
+    - python
+    - mysql
+  Libraries:
+    - Express
+  Tools:
+    - vscode
+  VCS:
+    - Git
+
+# Careers config [views/sections/careers.ejs]
+# 경력사항 설정입니다. 회사와 프로젝트를 추가할 수 있습니다.
+# 회사 추가시 careers 밑의 -company 부터 복사하여 사용하고, 
+# 프로젝트 추가시 projects 밑의 -name 부터 복사하여 사용합니다.
+
+# Experience settings. You can add companies and projects.
+# When adding a company, copy and use it from "-company" under careers. 
+# When adding a project, copy and use "-name" under projects.
+careers:
+  - company:
+    name: John Company
+    role: Junior Software Engineer
+    workPeriod:
+      start: '2018.03'
+      end: 'now'
+    techStack:
+      Language:
+        - HTML
+        - CSS3
+        - JavaScript
+        - Node.js
+      System:
+        - Ubuntu 16.04
+      Tool:
+        - Git
+    projects:
+      - name: Member management service operations
+        period:
+          start: '2018.03'
+          end: '2018.06'
+        description: The member management functions were developed and maintained for the smooth service use of users.
+        parts:
+          - Development of member management
+          - Implement SNS login
+
+# Other Experiences config [views/sections/experiences.ejs]
+# 기타 경험 설정입니다. 이름, 역할, 기간, 요약등을 추가할 수 있습니다.
+# 항목 추가시 -experience 부터 description까지 복사하여 사용합니다.
+
+# Other experience settings. You can add names, roles, periods, and summaries.
+# When adding an item, copy and use -experience to description under otherExperience.
+otherExperiences:
+  - experience:
+    name: Delicious Cookie Hackathon
+    role: Development
+    period:
+      start: '2018.08'
+      end: '2018.08'
+    description: Delicious Cookie Hackathon has developed Cookie Food Service and won it.
+  - experience:
+    name: Nursing home volunteer activities
+    role: Volunteer
+    period:
+      start: '2018.06'
+      end: '2018.07'
+    description: I went to the nursing home and did volunteer work. It was rewarding.
+
+# Educations config [views/sections/educations.ejs]
+# 학력, 교육 항목 설정입니다. 이름과 기간 요약을 추가할 수 있습니다.
+# 항목 추가시 -education 부터 description까지 복사하여 사용합니다.
+
+# Education, education item settings. Lets you add a name and a summary of the period summary.
+# When adding an item, copy and use the item from -education to description.
+educations:
+  - education:
+    name: Korea Cookie University
+    period:
+      start: '2011.03'
+      end: '2015.03'
+    description: I graduated from school.
+
+# Licenses config [views/sections/licenses.ejs]
+# 자격증 항목 설정입니다. 이름과 기간 요약을 추가할 수 있습니다.
+# 항목 추가시 licenses 밑의 -license 부터 description까지 복사하여 사용합니다.
+
+# Certificate entry settings. Lets you add a name and a summary of the period summary.
+# When adding items, copy and use the -license to description under Licenses.
+
+licenses:
+  - license:
+    name: Confectionary function qualification
+    role: Cookie Land
+    period:
+      start: '2012.07'
+    description: I got a license.
+    
+# aboutme config [views/sections/about.ejs]
+# 자기소개서 설정입니다. 자유롭게 작성할 수 있습니다.
+# - 로 항목을 추가하면 문단이 추가되는 효과가 있습니다.
+aboutme: 
+  - Elit minim consectetur adipisicing nisi et laborum occaecat esse
+  - dolor cupidatat exercitation consequat pariatur sunt. Esse est ipsum nostrud consectetur tempor ad. Anim laboris Lorem deserunt ad eu deserunt est aute.
+  - Sit elit veniam eiusmod est do sint et aliqua minim proident. Anim duis in eu sint sunt commodo incididunt magna cillum consectetur amet. 
+  - Irure velit sit eiusmod cupidatat minim irure cupidatat velit magna mollit in cupidatat cillum. Amet aliqua dolor elit enim. 
+  - Minim esse consectetur velit sunt nostrud nulla id aliqua. Ad culpa laborum ea mollit laborum id sint est qui nostrud proident dolore.Dolor tempor ut ad ut. Veniam id anim ipsum sint deserunt commodo sint exercitation.
+  - veniam deserunt proident voluptate occaecat dolor incididunt exercitation irure sit ex. Veniam cupidatat excepteur nulla laboris non sunt Lorem irure Lorem eu non enim dolor. Culpa enim nulla quis ex cupidatat anim ad occaecat anim ea nostrud.
