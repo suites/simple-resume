@@ -8,9 +8,9 @@
   	<a href="https://github.com/suitelab/simple-resume/LICENSE">
     	<img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="Simple-resume is released under the MIT license." />
   	</a>
-	<a href="https://github.com/bbvch13531/PwP"> <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102"> 
-	<a href="https://github.com/bbvch13531/PwP"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
-	<a href="https://github.com/bbvch13531/PwP"><img src="https://img.shields.io/badge/release-v0.0.1-brightgreen.svg">
+	<a href="https://github.com/bbvch13531/PwP"> <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102"></a>
+	<a href="https://github.com/bbvch13531/PwP"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"></a>
+	<a href="https://github.com/bbvch13531/PwP"><img src="https://img.shields.io/badge/release-v0.0.1-brightgreen.svg"></a>
 </p>
 
 ## Overview
