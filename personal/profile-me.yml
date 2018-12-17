@@ -189,5 +189,5 @@ licenses:
     date: '2006.08'
     description: 
     
-aboutme: 
-  - 자기소개
+# aboutme: 
+#   - 자기소개
