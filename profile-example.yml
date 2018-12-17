@@ -9,7 +9,9 @@ description: This is a resume of software engineer John Doe.
 # A picture, name and brief introduction to the top of your resume.
 name: John Doe
 photo: "./images/profile-example.jpg"
-introduction: Hello! I'm John Doe. I'm Software Engineer. I enjoy playing games and eating. I'm happiest when I eat. I like pork.
+introduction:
+  - Hello! I'm John Doe. I'm Software Engineer.
+  - I enjoy playing games and eating. I'm happiest when I eat. I like pork.
 
 # Profile link config [views/sections/profile.ejs]
 # email, github, linkedin, blog의 주소와 아이콘 설정입니다.
@@ -102,7 +104,8 @@ experiences:
     period:
       start: '2018.08'
       end: '2018.08'
-    description: Delicious Cookie Hackathon has developed Cookie Food Service and won it.
+    description: 
+      - Delicious Cookie Hackathon has developed Cookie Food Service and won it.
   - experience:
     name: Nursing home volunteer activities
     role: Volunteer

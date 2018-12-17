@@ -1,24 +1,26 @@
 <section>
-  <div class="row">
-  <div class="row-left">
-    <img src="<%= profile.photo %>" width=250px />
-  </div>
-  <div class="row-right">
-    <h2 class="name">
-      <%= profile.name %>
-    </h2>
-    <ul class="address">
-      <% for (const value of profile.links) { %>
-        <% if (value.type == 'email') { %>
-          <li><i class="<%= value.symbol %>"></i><a href="<%='mailto:' + value.name %>"><%= value.name %></a></li>  
-        <% } else { %>
-        <li><i class="<%= value.symbol %>"></i><a href="<%= value.name %>"><%= value.name %></a></li>  
+  <div class="row profile">
+    <div class="row-left">
+      <img src="<%= profile.photo %>" width=250px />
+    </div>
+    <div class="row-right">
+      <h2 class="name">
+        <%= profile.name %>
+      </h2>
+      <ul class="address">
+        <% for (const value of profile.links) { %>
+          <% if (value.type == 'email') { %>
+            <li><i class="<%= value.symbol %>"></i><a href="<%='mailto:' + value.name %>"><%= value.name %></a></li>  
+          <% } else { %>
+          <li><i class="<%= value.symbol %>"></i><a href="<%= value.name %>"><%= value.name %></a></li>  
+          <% } %>
         <% } %>
-      <% } %>
-    </ul>
+      </ul>
+    </div>
   </div>
-  </div>
-  <div class="row">
-  <p class="big-paragraph"><%= profile.introduction %></p>
+  <div class="profile">
+    <% for (var text of profile.introduction) { %>
+      <p class="big-paragraph"><%= text %></p>
+    <% } %>
   </div>
 </section>

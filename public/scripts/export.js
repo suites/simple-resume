@@ -53,6 +53,7 @@ const convert = async (filename) => {
         });
         const page = await browser.newPage();
         await page.goto(`http://localhost:3000/`, {
+        // await page.goto(`C:/Users/yoon.homme/Documents/projects/simple-resume/test.html`, {
             waitUntil: 'networkidle2'
         });
 
@@ -63,11 +64,11 @@ const convert = async (filename) => {
                 if (err.code !== 'EEXIST') throw err
             }
         }
-
         await page.pdf({
             path: path.join(dirPath, filename + '.pdf'),
             format: 'A4',
-            scale: 0.7
+            scale: 0.7,
+            margin: {top: '10mm', right: '10mm', left: '10mm', bottom: '10mm'}
         });
 
         await browser.close();
