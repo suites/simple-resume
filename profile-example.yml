@@ -3,7 +3,7 @@
 # Meta tag-related settings.
 blogUrl: http://example.com/resume
 description: This is a resume of software engineer John Doe.
-
+cover: "/"
 # Resume config [views/partials/profile.ejs]
 # 이력서 상단에 들어갈 사진과 이름, 간단 소개입니다.
 # A picture, name and brief introduction to the top of your resume.
