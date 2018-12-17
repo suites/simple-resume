@@ -35,20 +35,19 @@ $ git clone https://github.com/suitelab/simple-resume.git
 3. npm을 통해 package를 설치합니다. `npm i`
 
 ## How to use
-
 ```shell
 $ npm start profile
 > your resume [profile] in http://localhost:3000 !
-$ npm pdf
+$ npm run pdf
 ```
 - run your program, go to http://localhost:PortNumber
 - if you want export to pdf, after server on
 
 1. profile-example.yml 파일을 복사하여 새로운 profile.yml을 생성합니다.
 2. 파일 내의 설명을 따라서 profile.yml을 작성합니다.
-3. shell에서 `npm start {yml 파일명}`을 입력하여 서버를 실행 합니다.
+3. shell에서 `npm start {yml/경로/파일명}`을 입력하여 서버를 실행 합니다.
 4. http://localhost:3000 에서 이력서를 확인할 수 있습니다.
-5. (Beta)pdf 출력은 `npm pdf`로 할 수 있습니다.
+5. (Beta)pdf 출력은 `npm run pdf {출력할/경로/파일명}`로 할 수 있습니다.
 
 ## Demo
 * simple-resume

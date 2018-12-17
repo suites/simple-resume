@@ -2,7 +2,7 @@
     <div class="headline">
     <h2><i class="fas fa-code-branch"></i>Other Experiences</h2>
     </div>
-    <% for (const experience of profile.otherExperiences) { %>
+    <% for (const experience of profile.experiences) { %>
         <div class="other">
         <h3><%= experience.name %></h3>
         <span class="role"><%= experience.role %></span>
@@ -14,9 +14,9 @@
             <%= experience.period.end %>
             </time>
         </span>
-        <p>
-            <%= experience.description %>
-        </p>
+            <% for (var text of experience.description) { %>
+                <p><%= text %></p>
+            <% } %>
         </div>
     <% } %>
 </section>

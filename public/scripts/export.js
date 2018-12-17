@@ -38,14 +38,14 @@ const waitForServerReachable = () => {
     );
 };
 
-const convert = async () => {
+const convert = async (filename) => {
     await waitForServerReachable().pipe(
         first()
     ).toPromise();
 
     console.log('Connected to server ...');
     console.log('Exporting ...');
-
+    const dirPath = appRoot.path + '/pdf/'
 
     try {
         const browser = await puppeteer.launch({
@@ -56,8 +56,6 @@ const convert = async () => {
             waitUntil: 'networkidle2'
         });
 
-        const dirPath = appRoot.path + '/pdf/'
-
         const mkdirSync = (dirPath) => {
             try {
                 fs.mkdirSync(dirPath);
@@ -67,7 +65,7 @@ const convert = async () => {
         }
 
         await page.pdf({
-            path: path.join(dirPath, 'resume' + '.pdf'),
+            path: path.join(dirPath, filename + '.pdf'),
             format: 'A4',
             scale: 0.7
         });
@@ -76,7 +74,12 @@ const convert = async () => {
     } catch (err) {
         throw new Error(err);
     }
-    console.log('Finished exports.');
+    console.log('Finished exports. Goto->', path.join(dirPath, filename + '.pdf'));
 };
 
-convert();
+let filename = process.argv[2];
+if (filename == null) {
+    console.log('Usage: npm run pdf <filename>');
+    filename = 'profile';
+}
+convert(filename);

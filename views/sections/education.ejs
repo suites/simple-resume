@@ -5,6 +5,7 @@
     <% for (const education of profile.educations) { %>
         <div class="other">
         <h3><%= education.name %></h3>
+        <span class="role"><%= education.major %></span>
         <span class="time">
             <time datetime="<%= education.period.start %>">
             <%= education.period.start %>

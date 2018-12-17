@@ -57,6 +57,7 @@ skills:
 # 경력사항 설정입니다. 회사와 프로젝트를 추가할 수 있습니다.
 # 회사 추가시 careers 밑의 -company 부터 복사하여 사용하고, 
 # 프로젝트 추가시 projects 밑의 -name 부터 복사하여 사용합니다.
+# Date type : yyyy.mm
 
 # Experience settings. You can add companies and projects.
 # When adding a company, copy and use it from "-company" under careers. 
@@ -94,7 +95,7 @@ careers:
 
 # Other experience settings. You can add names, roles, periods, and summaries.
 # When adding an item, copy and use -experience to description under otherExperience.
-otherExperiences:
+experiences:
   - experience:
     name: Delicious Cookie Hackathon
     role: Development
@@ -108,7 +109,8 @@ otherExperiences:
     period:
       start: '2018.06'
       end: '2018.07'
-    description: I went to the nursing home and did volunteer work. It was rewarding.
+    description:
+      - I went to the nursing home and did volunteer work. It was rewarding.
 
 # Educations config [views/sections/educations.ejs]
 # 학력, 교육 항목 설정입니다. 이름과 기간 요약을 추가할 수 있습니다.
@@ -135,8 +137,7 @@ licenses:
   - license:
     name: Confectionary function qualification
     role: Cookie Land
-    period:
-      start: '2012.07'
+    date: '2008.05'
     description: I got a license.
     
 # aboutme config [views/sections/about.ejs]
