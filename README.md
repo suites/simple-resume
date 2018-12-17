@@ -47,7 +47,7 @@ $ npm run pdf
 2. 파일 내의 설명을 따라서 profile.yml을 작성합니다.
 3. shell에서 `npm start {yml/경로/파일명}`을 입력하여 서버를 실행 합니다.
 4. http://localhost:3000 에서 이력서를 확인할 수 있습니다.
-5. (Beta)pdf 출력은 `npm run pdf {출력할/경로/파일명}`로 할 수 있습니다.
+5. (Beta)pdf 출력은 서버가 실행중일 때 `npm run pdf {출력할/경로/파일명}`로 할 수 있습니다.
 
 ## Demo
 * simple-resume
