@@ -123,6 +123,17 @@ careers:
 
 experiences:
   - experience:
+    name: Simple resume
+    role: Development
+    period:
+      start: '2018.12'
+      end: '2018.12'
+    description:
+      - "Demo link : http://resume.suitee.me/"
+      - "Github : https://github.com/suitelab/simple-resume"
+      - Simple-resume은 node.js와 yaml을 통해 편리하고 빠르게 이력서를 작성할 수 있는 서비스 입니다.
+      - yaml을 작성 후 express 서버를 실행시 이력서가 생성되고 pdf로 출력할 수도 있습니다.
+  - experience:
     name: Lostark wait notifier
     role: Development
     period:

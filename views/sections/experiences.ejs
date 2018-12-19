@@ -15,7 +15,7 @@
             </time>
         </span>
             <% for (var text of experience.description) { %>
-                <p><%= text %></p>
+                <p><%- Autolinker.link(text); %></p>
             <% } %>
         </div>
     <% } %>

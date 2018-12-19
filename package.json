@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "app-root-path": "^2.1.0",
+    "autolinker": "^1.8.1",
     "ejs": "^2.6.1",
     "express": "^4.16.4",
     "js-yaml": "^3.12.0",
