@@ -91,6 +91,12 @@ h5 {
   color: #333333;
 }
 
+h6 {
+  font-size: 1rem;
+  margin: 0 0 0.5rem 0;
+  color: #333333;
+}
+
 ul.address{
   list-style-type:none;
   }

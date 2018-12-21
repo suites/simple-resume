@@ -5,7 +5,13 @@
     <div class="other">
     <p>
         <% for (var text of profile.aboutme) { %>
-            <p><%= text %></p>
+            <% if (text.includes("##")) { %>
+                <h6><%= text.replace("##", ""); %></h6>
+            <% } else if (text.includes("#")) { %>
+                <h5><%= text.replace("#", ""); %></h5>
+            <% } else { %>
+                <p><%= text %></p>
+            <% } %>
         <% } %>
     </p>
     </div>
