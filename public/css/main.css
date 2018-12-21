@@ -108,7 +108,7 @@ ul{
 }
 ul>li{
   position:relative;
-  padding:.2rem 0 .2rem 1rem
+  padding:.2rem 0 0rem 1rem
 }
 ul>li:before{
   position:absolute;
@@ -233,4 +233,11 @@ svg.svg-inline--fa{
   height: 8px;
   background: #3a7bd5;
   width: 0%;
+}
+
+@media print{
+  .header {
+    position: none;
+    width: 0%;
+  }
 }
