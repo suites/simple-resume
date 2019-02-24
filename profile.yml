@@ -1,0 +1,169 @@
+# Head config [views/partials/head.ejs]
+# Meta tag 관련 설정입니다.
+# Meta tag-related settings.
+blogUrl: http://example.com/resume
+description: iOS 개발자,  민송경의 이력서입니다.
+cover: "/"
+# Resume config [views/partials/profile.ejs]
+# 이력서 상단에 들어갈 사진과 이름, 간단 소개입니다.
+# A picture, name and brief introduction to the top of your resume.
+name: 민송경(Songkyung Min)
+photo: "./images/min.jpg"
+introduction:
+  - 생산성, 원활한 유지보수를 위한 클린코드에 관심이 많습니다. 
+  - 주로 Swift, Cocoa Touch framework, Git, CocoaPods 등을 사용하여 개발을 하고 있습니다.
+  - 변화에 따른 기술학습과 문제해결 과정을 통하여 개발자로서 발전하기 위해 노력하고 있습니다.
+# Profile link config [views/sections/profile.ejs]
+# email, github, linkedin, blog의 주소와 아이콘 설정입니다.
+# The address and icon settings for email, github, linkedin, and blog.
+# name: 연결할 서비스의 주소입니다.
+# symbol: 링크 앞의 awesome font 심볼입니다. [https://fontawesome.com/icons/](ex : fab fa-apple)
+# type: 링크의 서비스명 입니다.
+
+# name: The address of the service to which you want to connect.
+# symbol: Awesome font symbol in front of the link. [https://fontawesome.com/icons/](ex : fab fa-apple)
+# type: This is the service name of the link.
+
+links:
+  - name: "min.songkyung@gmail.com"
+    symbol: fas fa-envelope
+    type: email
+  - name: "https://github.com/min1022"
+    symbol: fab fa-github
+    type: github
+  - name: "https://www.linkedin.com/in/songkyung-min-5a7a59115/"
+    symbol: fas fab fa-linkedin
+    type: linkedin
+  - name: "https://blog.naver.com/greenday32"
+    symbol: fas fa-home
+    type: blog
+
+# Skills config [views/sections/skills.ejs]
+# 보유기술 설정입니다. 항목을 자유롭게 추가할 수 있습니다.
+
+# This is a technology setting. You can add items freely.
+skills:
+  Languages:
+    - Swift
+    - JavaScript(jQuery, React, React-Native)
+    - Java(Spring, JSP, Android)
+    - PHP
+  Database:
+    - MySQL
+    - Realm
+    - Oracle
+  Tools:
+    - Xcode
+    - VS code
+    - Vim
+    - CocoaPods
+  VCS:
+    - Git / github
+  Etc:
+    - mac OS
+    - Linux
+    - Firebase
+# Careers config [views/sections/careers.ejs]
+# 경력사항 설정입니다. 회사와 프로젝트를 추가할 수 있습니다.
+# 회사 추가시 careers 밑의 -company 부터 복사하여 사용하고, 
+# 프로젝트 추가시 projects 밑의 -name 부터 복사하여 사용합니다.
+# Date type : yyyy.mm
+
+# Experience settings. You can add companies and projects.
+# When adding a company, copy and use it from "-company" under careers. 
+# When adding a project, copy and use "-name" under projects.
+careers:
+  - company:
+    name: (주)글로벌휴머니즘
+    role: iOS developer
+    workPeriod:
+      start: '2018.10'
+      end: 'now'
+    techStack:
+      Language:
+        - Swift
+        - Objective-C
+        - JavaScript
+      System:
+        - mac OS
+      Tool:
+        - Git
+        - Xcode
+        - Cocoa Touch framework
+        - CocoaPods
+        - REST API
+    projects:
+      - name: 커피코인(CoCo)
+        period:
+          start: '2018.10'
+          end: '2018.11'
+        description: 제휴 매장에서 커피 구매 시, 매장 내 인공지능 로봇을 통하여 가상화폐를 적립해주는 커피전문점 소상공인 활성화 서비스입니다. 
+        parts:
+          - xcode 10.0 / Swift 4
+          - Autolayout, SnapKit 이용하여 UI 구현
+          - JavaScript 브릿지 연동
+          - 위치정보 기반 서비스 제공
+
+# Other Experiences config [views/sections/experiences.ejs]
+# 기타 경험 설정입니다. 이름, 역할, 기간, 요약등을 추가할 수 있습니다.
+# 항목 추가시 -experience 부터 description까지 복사하여 사용합니다.
+
+# Other experience settings. You can add names, roles, periods, and summaries.
+# When adding an item, copy and use -experience to description under otherExperience.
+experiences:
+  - experience:
+    name: 인덕대학교 학과동아리(Rebooting & netPee)
+    role: 팀원
+    period:
+      start: '2016.03'
+      end: '2019.02'
+    description: 
+      - 동아리활동을 통하여 프로그래밍 지식 및 원활한 커뮤니케이션 스킬을 갖추게 되었으며, 동아리 구성원으로서의 공동체의식과 책임감을 배웠습니다. 이를 바탕으로 서울시 앱 공모전에도 참가해보며 대학시절의 소중한 추억도 남길 수 있었습니다.
+  - experience:
+    name: 노원구 창업&지역경제 한마당(창업대전)
+    role: 개발, 문서화 담당
+    period:
+      start: '2017.08'
+      end: '2017.09'
+    description:
+      - Java, Jsp Servlet을 활용하여 제작한 푸드트럭 정보 제공 웹사이트로 참가하였습니다.
+# Educations config [views/sections/educations.ejs]
+# 학력, 교육 항목 설정입니다. 이름과 기간 요약을 추가할 수 있습니다.
+# 항목 추가시 -education 부터 description까지 복사하여 사용합니다.
+
+# Education, education item settings. Lets you add a name and a summary of the period summary.
+# When adding an item, copy and use the item from -education to description.
+educations:
+  - education:
+    name: 인덕대학교(컴퓨터 소프트웨어학과)
+    period:
+      start: '2016.03'
+      end: '2019.02'
+    description: 인덕대학교 컴퓨터 소프트웨어학과
+# Licenses config [views/sections/licenses.ejs]
+# 자격증 항목 설정입니다. 이름과 기간 요약을 추가할 수 있습니다.
+# 항목 추가시 licenses 밑의 -license 부터 description까지 복사하여 사용합니다.
+
+# Certificate entry settings. Lets you add a name and a summary of the period summary.
+# When adding items, copy and use the -license to description under Licenses.
+
+licenses:
+  - license:
+    name: 정보처리산업기사
+    date: '2018.08.17'
+    description: 필기합격
+    
+  - license:
+    name: TOEIC
+    date: '2018.04.17'
+    description: 825점
+
+  - license:
+    name: 네트워크 관리사 2급
+    date: 2016.12.20
+   
+# aboutme config [views/sections/about.ejs]
+# 자기소개서 설정입니다. 자유롭게 작성할 수 있습니다.
+# - 로 항목을 추가하면 문단이 추가되는 효과가 있습니다.
+aboutme: 
+ -  현시대의 급변하는 상황에 유연히 대처하는 자세를 갖추는 것이 정말 중요하다고 생각합니다. 제가 가진 그러한 역량들을 통해 귀사에 보탬이 되고자 지난날의 회사생활과 대학생활을 통하여 갖춘 능력을 최대한 발휘해보고 싶습니다. 또한, 팀원들과의 협업과 원활한 커뮤니케이션을 통해 서로서로 배운다는 마음가짐으로 임하겠습니다. 뿐만 아니라 국내외 포럼을 바탕으로 여러 개발자들과 의견을 공유하며 의사소통 능력을 기르고 기술 변화에 맞는 지식을 채우며 귀사와 동반성장을 이루어나가겠습니다.
