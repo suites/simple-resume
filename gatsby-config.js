@@ -32,7 +32,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `./src/resumes/`,
+        path: `./resumes/`,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
