@@ -1,9 +1,9 @@
-import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { graphql, Link, useStaticQuery } from 'gatsby';
+import React from 'react';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Image from '../components/image';
+import Layout from '../components/layout';
+import SEO from '../components/seo';
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -17,13 +17,13 @@ const IndexPage = () => {
   }
 }
 
-`)
+`);
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title='Home' />
       <h1>{data.allResumesYaml.edges[0].node.name}</h1>
     </Layout>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
