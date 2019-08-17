@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
+import Resume from '../../models';
 
 const Profile = () => {
   const data = useStaticQuery(graphql`
@@ -20,7 +21,7 @@ const Profile = () => {
   }
 }
   `);
-  const profile = data.allResumesYaml.edges[0].node;
+  const profile: Resume = data.allResumesYaml.edges[0].node;
   return (
     <>
       <img src={profile.photo} />
