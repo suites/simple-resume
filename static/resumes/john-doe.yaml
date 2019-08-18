@@ -44,22 +44,18 @@ links:
 
 # This is a technology setting. You can add items freely.
 skills:
-  - skill:
-    name: Languages
+  - name: Languages
     items:
     - Node.js
     - python
     - mysql
-  - skill:
-    name: Libraries
+  - name: Libraries
     items:
     - Express
-  - skill:
-    name: Tools
+  - name: Tools
     items:
     - vscode
-  - skill:
-    name: VCS
+  - name: VCS
     items:
     - Git
 
@@ -73,21 +69,23 @@ skills:
 # When adding a company, copy and use it from "-company" under careers. 
 # When adding a project, copy and use "-name" under projects.
 careers:
-  - company:
-    name: John Company
+  - name: John Company
     role: Junior Software Engineer
     workPeriod:
       start: '2018.03'
       end: 'now'
-    techStack:
-      Language:
+    techStacks:
+      - name: Language
+        items:
         - HTML
         - CSS3
         - JavaScript
         - Node.js
-      System:
+      - name: System
+        items:
         - Ubuntu 16.04
-      Tool:
+      - name: Tool
+        items:
         - Git
     projects:
       - name: Member management service operations
@@ -106,16 +104,14 @@ careers:
 # Other experience settings. You can add names, roles, periods, and summaries.
 # When adding an item, copy and use -experience to description under otherExperience.
 experiences:
-  - experience:
-    name: Delicious Cookie Hackathon
+  - name: Delicious Cookie Hackathon
     role: Development
     period:
       start: '2018.08'
       end: '2018.08'
     description: 
       - Delicious Cookie Hackathon has developed Cookie Food Service and won it.
-  - experience:
-    name: Nursing home volunteer activities
+  - name: Nursing home volunteer activities
     role: Volunteer
     period:
       start: '2018.06'
@@ -130,8 +126,7 @@ experiences:
 # Education, education item settings. Lets you add a name and a summary of the period summary.
 # When adding an item, copy and use the item from -education to description.
 educations:
-  - education:
-    name: Korea Cookie University
+  - name: Korea Cookie University
     period:
       start: '2011.03'
       end: '2015.03'
@@ -145,8 +140,7 @@ educations:
 # When adding items, copy and use the -license to description under Licenses.
 
 licenses:
-  - license:
-    name: Confectionary function qualification
+  - name: Confectionary function qualification
     role: Cookie Land
     date: '2008.05'
     description: I got a license.

@@ -15,9 +15,8 @@ export interface WorkPeriod {
 }
 
 export interface TechStack {
-  Language: string[];
-  System: string[];
-  Tool: string[];
+  name: string;
+  items: string[];
 }
 
 export interface Period {
@@ -33,11 +32,10 @@ export interface Project {
 }
 
 export interface Career {
-  company?: any;
   name: string;
   role: string;
   workPeriod: WorkPeriod;
-  techStack: TechStack;
+  techStacks: TechStack[];
   projects: Project[];
 }
 
@@ -47,7 +45,6 @@ export interface Period2 {
 }
 
 export interface Experience {
-  experience?: any;
   name: string;
   role: string;
   period: Period2;
@@ -60,14 +57,12 @@ export interface Period3 {
 }
 
 export interface Education {
-  education?: any;
   name: string;
   period: Period3;
   description: string;
 }
 
 export interface License {
-  license?: any;
   name: string;
   role: string;
   date: string;
