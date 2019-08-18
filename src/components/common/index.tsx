@@ -92,6 +92,12 @@ export const StyledH4 = styled.h4`
   margin: 0 0 1rem 0;
 `;
 
+export const StyledH5 = styled.h5`
+  font-size: 1.3rem;
+  margin: 0 0 0.5rem 0;
+  color: #333333;
+`;
+
 interface FaIconProps {
   icon: string;
   verticalAlign?: string;
@@ -110,3 +116,28 @@ export const FaIcon = ({ icon, verticalAlign, marginRight, size }: FaIconProps) 
   }
 
 };
+
+export const PeriodTime = ({ start, end }: { start: string, end: string }) => {
+  return (
+    <StyledTime>
+      <time dateTime={start}>
+        {start}
+      </time>
+      -
+      <time dateTime={end}>
+        {end}
+      </time>
+    </StyledTime>
+  );
+};
+
+export const StyledTime = styled.span`
+  display: block;
+  margin-bottom: 1.5rem;
+`;
+
+export const StyledP = styled.p`
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.4;
+`;
