@@ -6,6 +6,32 @@ export const Section = styled.section`
   padding: 0 2rem;
 `;
 
+export const SectionTitle = styled.h2`
+`;
+
+const StyledHeadline = styled.div`
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 2px solid #3a7bd5;
+`;
+
+export const HeadLine = ({ icon, title }: { icon: string, title: string }) => {
+  return (
+    <StyledHeadline>
+      <StyledH2>
+        <FaIcon
+          icon={icon}
+          verticalAlign='-.5rem'
+          marginRight='1rem'
+          size='50'
+        />
+        {title}
+      </StyledH2>
+    </StyledHeadline>
+  );
+};
+
 export const Row = styled.div`
   display: flex;
   padding: 3rem 0;
@@ -66,11 +92,18 @@ export const StyledH4 = styled.h4`
   margin: 0 0 1rem 0;
 `;
 
-export const FaIcon = ({ icon, verticalAlign, marginRight }: { icon: string, verticalAlign?: string, marginRight?: string }) => {
+interface FaIconProps {
+  icon: string;
+  verticalAlign?: string;
+  marginRight?: string;
+  size?: string;
+}
+
+export const FaIcon = ({ icon, verticalAlign, marginRight, size }: FaIconProps) => {
   try {
     const Result = (icons as any)[icon];
     return (
-      <Result style={{ verticalAlign, marginRight }} />
+      <Result style={{ verticalAlign, marginRight }} size={size} />
     );
   } catch {
     return <></>;

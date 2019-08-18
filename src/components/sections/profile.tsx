@@ -37,7 +37,7 @@ const AddressItem = styled(StyledLi)`
   }
 `;
 
-const Profile = () => {
+export const Profile = () => {
   const data = useStaticQuery(graphql`
   query {
   allResumesYaml {
@@ -56,21 +56,21 @@ const Profile = () => {
   }
 }
   `);
-  const profile: Resume = data.allResumesYaml.edges[0].node;
+  const resume: Resume = data.allResumesYaml.edges[0].node;
 
   return (
     <Section>
       <ProfileRow>
         <RowLeft>
-          <img src={profile.photo} width='250px' />
+          <img src={resume.photo} width='250px' />
         </RowLeft>
         <RowRight>
           <Name>
-            {profile.name}
+            {resume.name}
           </Name>
           <Address>
             {
-              profile.links.map((value, i) => {
+              resume.links.map((value, i) => {
                 return (
                   <AddressItem key={i}>
                     <FaIcon
@@ -89,7 +89,7 @@ const Profile = () => {
       </ProfileRow>
       <Introduction>
         {
-          profile.introduction.map((value, i) => {
+          resume.introduction.map((value, i) => {
             return <p>{value}</p>;
           })
         }
@@ -97,5 +97,3 @@ const Profile = () => {
     </Section>
   );
 };
-
-export default Profile;
