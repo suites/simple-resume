@@ -70,8 +70,8 @@ skills:
 # When adding a project, copy and use "-name" under projects.
 careers:
   - name: John Company
-    role: Junior Software Engineer
-    workPeriod:
+    information: Junior Software Engineer
+    date:
       start: '2018.03'
       end: 'now'
     techStacks:
@@ -89,7 +89,7 @@ careers:
         - Git
     projects:
       - name: Member management service operations
-        period:
+        date:
           start: '2018.03'
           end: '2018.06'
         description: The member management functions were developed and maintained for the smooth service use of users.
@@ -101,19 +101,19 @@ careers:
 # 기타 경험 설정입니다. 이름, 역할, 기간, 요약등을 추가할 수 있습니다.
 # 항목 추가시 -experience 부터 description까지 복사하여 사용합니다.
 
-# Other experience settings. You can add names, roles, periods, and summaries.
+# Other experience settings. You can add names, informations, date, and summaries.
 # When adding an item, copy and use -experience to description under otherExperience.
 experiences:
   - name: Delicious Cookie Hackathon
-    role: Development
-    period:
+    information: Development
+    date:
       start: '2018.08'
       end: '2018.08'
     description: 
       - Delicious Cookie Hackathon has developed Cookie Food Service and won it.
   - name: Nursing home volunteer activities
-    role: Volunteer
-    period:
+    information: Volunteer
+    date:
       start: '2018.06'
       end: '2018.07'
     description:
@@ -123,27 +123,30 @@ experiences:
 # 학력, 교육 항목 설정입니다. 이름과 기간 요약을 추가할 수 있습니다.
 # 항목 추가시 -education 부터 description까지 복사하여 사용합니다.
 
-# Education, education item settings. Lets you add a name and a summary of the period summary.
+# Education, education item settings. Lets you add a name and a summary of the date summary.
 # When adding an item, copy and use the item from -education to description.
 educations:
   - name: Korea Cookie University
-    period:
+    date:
       start: '2011.03'
       end: '2015.03'
-    description: I graduated from school.
+    description:
+      - I graduated from school.
 
 # Licenses config [views/sections/licenses.ejs]
 # 자격증 항목 설정입니다. 이름과 기간 요약을 추가할 수 있습니다.
 # 항목 추가시 licenses 밑의 -license 부터 description까지 복사하여 사용합니다.
 
-# Certificate entry settings. Lets you add a name and a summary of the period summary.
+# Certificate entry settings. Lets you add a name and a summary of the date summary.
 # When adding items, copy and use the -license to description under Licenses.
 
 licenses:
   - name: Confectionary function qualification
-    role: Cookie Land
-    date: '2008.05'
-    description: I got a license.
+    information: Cookie Land
+    date:
+      start: '2008.03'
+    description: 
+      - I got a license.
     
 # aboutme config [views/sections/about.ejs]
 # 자기소개서 설정입니다. 자유롭게 작성할 수 있습니다.
