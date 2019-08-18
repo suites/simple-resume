@@ -44,15 +44,23 @@ links:
 
 # This is a technology setting. You can add items freely.
 skills:
-  Languages:
+  - skill:
+    name: Languages
+    items:
     - Node.js
     - python
     - mysql
-  Libraries:
+  - skill:
+    name: Libraries
+    items:
     - Express
-  Tools:
+  - skill:
+    name: Tools
+    items:
     - vscode
-  VCS:
+  - skill:
+    name: VCS
+    items:
     - Git
 
 # Careers config [views/sections/careers.ejs]

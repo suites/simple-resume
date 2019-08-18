@@ -4,11 +4,9 @@ export interface Link {
   type: string;
 }
 
-export interface Skills {
-  Languages: string[];
-  Libraries: string[];
-  Tools: string[];
-  VCS: string[];
+export interface Skill {
+  name: string;
+  items: string[];
 }
 
 export interface WorkPeriod {
@@ -84,7 +82,7 @@ export default interface Resume {
   photo: string;
   introduction: string[];
   links: Link[];
-  skills: Skills;
+  skills: Skill[];
   careers: Career[];
   experiences: Experience[];
   educations: Education[];
