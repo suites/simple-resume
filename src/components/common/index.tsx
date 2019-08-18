@@ -2,6 +2,7 @@ import React from 'react';
 import * as icons from 'react-icons/fa';
 import styled from 'styled-components';
 
+export * from './ProgressBar';
 export const Section = styled.section`
   padding: 0 2rem;
 `;
@@ -101,15 +102,16 @@ export const StyledH5 = styled.h5`
 interface FaIconProps {
   icon: string;
   verticalAlign?: string;
+  marginLeft?: string;
   marginRight?: string;
   size?: string;
 }
 
-export const FaIcon = ({ icon, verticalAlign, marginRight, size }: FaIconProps) => {
+export const FaIcon = ({ icon, verticalAlign, marginRight, marginLeft, size }: FaIconProps) => {
   try {
     const Result = (icons as any)[icon];
     return (
-      <Result style={{ verticalAlign, marginRight }} size={size} />
+      <Result style={{ verticalAlign, marginRight, marginLeft }} size={size} />
     );
   } catch {
     return <></>;
@@ -117,16 +119,27 @@ export const FaIcon = ({ icon, verticalAlign, marginRight, size }: FaIconProps) 
 
 };
 
-export const PeriodTime = ({ start, end }: { start: string, end: string }) => {
+interface DateProps {
+  start: string;
+  end?: string;
+}
+
+export const Date = ({ start, end }: DateProps) => {
+  console.log(start, end);
   return (
     <StyledTime>
       <time dateTime={start}>
         {start}
       </time>
-      -
-      <time dateTime={end}>
-        {end}
-      </time>
+      {
+        end &&
+        <>
+          -
+          <time dateTime={end}>
+            {end}
+          </time>
+        </>
+      }
     </StyledTime>
   );
 };

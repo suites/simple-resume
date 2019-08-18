@@ -40,7 +40,7 @@ export const Skills = () => {
                 </StyledUl>
               </RowRight>
             </Row>
-          )
+          );
         })
       }
 

@@ -1,22 +1,25 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import React from 'react';
 import Resume, { Career, Project } from '../../models';
-import { FaIcon, HeadLine, PeriodTime, Row, RowLeft, RowRight, Section, StyledH3, StyledH4, StyledH5, StyledLi, StyledP, StyledUl } from '../common';
+import { Date, FaIcon, HeadLine, Row, RowLeft, RowRight, Section, StyledH3, StyledH4, StyledH5, StyledLi, StyledP, StyledUl } from '../common';
 
 const TechStack = ({ career }: { career: Career }) => {
   return (
-    <StyledUl>
-      <StyledLi>
-        {career.techStacks.map((techStack) => {
-          return (
-            <StyledLi>
-              {`${techStack.name} : ${techStack.items.join(', ')}`}
-            </StyledLi>
-          );
-        })
-        }
-      </StyledLi>
-    </StyledUl>
+    <>
+      <StyledH5>{'Tech Stacks'}</StyledH5>
+      <StyledUl>
+        <StyledLi>
+          {career.techStacks.map((techStack) => {
+            return (
+              <StyledLi>
+                {`${techStack.name} : ${techStack.items.join(', ')}`}
+              </StyledLi>
+            );
+          })
+          }
+        </StyledLi>
+      </StyledUl>
+    </>
   );
 };
 
@@ -28,10 +31,19 @@ const ProjectComponent = ({ projects }: { projects: Project[] }) => {
           return (
             <>
               <StyledH4>
-                <FaIcon icon='FaAngleRight' />
+                <FaIcon
+                  icon='FaAngleRight'
+                  verticalAlign='-.125rem'
+                  marginLeft='-.4rem'
+                  marginRight='.5rem'
+                  size='24'
+                />
                 {project.name}
               </StyledH4>
-              <PeriodTime start={project.period.start} end={project.period.end} />
+              {
+                project.date &&
+                <Date start={project.date.start} end={project.date.end} />
+              }
               <StyledH5>Descrition</StyledH5>
               <StyledP>{project.description}</ StyledP>
               <StyledH5>What did I do</StyledH5>
@@ -60,8 +72,8 @@ export const Careers = () => {
       node {
         careers {
           name
-          role
-          workPeriod {
+          information
+          date {
             start
             end
           }
@@ -71,7 +83,7 @@ export const Careers = () => {
           }
           projects {
             name
-            period {
+            date {
               start
               end
             }
@@ -95,8 +107,11 @@ export const Careers = () => {
             <Row>
               <RowLeft>
                 <StyledH3>{career.name}</StyledH3>
-                {career.role}
-                <PeriodTime start={career.workPeriod.start} end={career.workPeriod.end} />
+                {career.information}
+                {
+                  career.date &&
+                  <Date start={career.date.start} end={career.date.end} />
+                }
               </RowLeft>
               <RowRight>
                 <TechStack career={career} />
