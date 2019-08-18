@@ -1,23 +1,21 @@
-import { graphql, useStaticQuery } from 'gatsby';
-import PropTypes from 'prop-types';
 import React from 'react';
 
+import styled from 'styled-components';
 import './layout.css';
 import Profile from './sections/profile';
 
+const Container = styled.div`
+  width: 100%;
+  max-width: 50rem;
+  margin: auto;
+`;
+
 const Layout = ({ children }: { children: any }) => {
   return (
-    <>
-      <div>
-        <main>{children}</main>
-      </div>
+    <Container>
       <Profile />
-    </>
+    </Container>
   );
-};
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

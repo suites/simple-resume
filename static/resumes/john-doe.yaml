@@ -27,16 +27,16 @@ introduction:
 
 links:
   - name: "john.doe@example.com"
-    symbol: fas fa-envelope
+    symbol: FaEnvelope
     type: email
   - name: "https://github.com/johndoe"
-    symbol: fab fa-github
+    symbol: FaGithub
     type: github
   - name: https://www.linkedin.com/in/johndoe
-    symbol: fas fab fa-linkedin
+    symbol: FaLinkedin
     type: linkedin
   - name: http://example.com
-    symbol: fas fa-home
+    symbol: FaHome
     type: blog
 
 # Skills config [views/sections/skills.ejs]
