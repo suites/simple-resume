@@ -4,10 +4,13 @@ import styled from 'styled-components';
 import Resume from '../../models';
 import { ALink, FaIcon, Row, RowLeft, RowRight, Section, StyledH2, StyledLi, StyledUl } from '../common';
 
+const Contents = styled.div`
+`;
+
 const Introduction = styled.div`
   padding: 2rem 0 0rem;
   border-bottom: 0px;
-  & > p {
+  & > ${Contents} {
     margin: 0 0 1rem 0;
     font-size: 2rem;
     line-height: 1.4;
@@ -74,7 +77,6 @@ export const Profile = () => {
                 return (
                   <AddressItem key={i}>
                     <FaIcon
-                      key={i}
                       icon={value.symbol}
                       verticalAlign='-.125rem'
                       marginRight='1rem'
@@ -90,7 +92,7 @@ export const Profile = () => {
       <Introduction>
         {
           resume.introduction.map((value, i) => {
-            return <p>{value}</p>;
+            return <Contents key={i}>{value}</Contents>;
           })
         }
       </Introduction>

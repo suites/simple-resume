@@ -9,14 +9,16 @@ const TechStack = ({ career }: { career: Career }) => {
       <StyledH5>{'Tech Stacks'}</StyledH5>
       <StyledUl>
         <StyledLi>
-          {career.techStacks.map((techStack) => {
-            return (
-              <StyledLi>
-                {`${techStack.name} : ${techStack.items.join(', ')}`}
-              </StyledLi>
-            );
-          })
-          }
+          <StyledUl>
+            {career.techStacks.map((techStack, i) => {
+              return (
+                <StyledLi key={i}>
+                  {`${techStack.name} : ${techStack.items.join(', ')}`}
+                </StyledLi>
+              );
+            })
+            }
+          </ StyledUl>
         </StyledLi>
       </StyledUl>
     </>
@@ -27,9 +29,9 @@ const ProjectComponent = ({ projects }: { projects: Project[] }) => {
   return (
     <>
       {
-        projects.map((project) => {
+        projects.map((project, i) => {
           return (
-            <>
+            <div key={i}>
               <StyledH4>
                 <FaIcon
                   icon='FaAngleRight'
@@ -48,15 +50,15 @@ const ProjectComponent = ({ projects }: { projects: Project[] }) => {
               <StyledP>{project.description}</ StyledP>
               <StyledH5>What did I do</StyledH5>
               <StyledUl>
-                {project.parts.map((part) => {
+                {project.parts.map((part, j) => {
                   return (
-                    <StyledLi>
+                    <StyledLi key={j}>
                       {part}
                     </StyledLi>
                   );
                 })}
               </StyledUl>
-            </>
+            </div>
           );
         })
       }
@@ -102,9 +104,9 @@ export const Careers = () => {
     <Section>
       <HeadLine icon='FaBriefcase' title='Careers' />
       {
-        resume.careers.map((career) => {
+        resume.careers.map((career, i) => {
           return (
-            <Row>
+            <Row key={i}>
               <RowLeft>
                 <StyledH3>{career.name}</StyledH3>
                 {career.information}

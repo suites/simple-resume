@@ -24,17 +24,17 @@ export const Skills = () => {
     <Section>
       <HeadLine icon='FaLaptopCode' title='Skills' />
       {
-        resume.skills.map((value) => {
+        resume.skills.map((value, i) => {
           return (
-            <Row>
+            <Row key={i}>
               <RowLeft>
                 <StyledH3>{value.name}</StyledH3>
               </RowLeft>
               <RowRight>
                 <StyledUl>
                   {
-                    value.items.map((item) => {
-                      return <StyledLi>{item}</StyledLi>;
+                    value.items.map((item, j) => {
+                      return <StyledLi key={j}>{item}</StyledLi>;
                     })
                   }
                 </StyledUl>

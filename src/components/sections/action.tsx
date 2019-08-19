@@ -17,13 +17,16 @@ const Contents = styled.div`
 const Information = styled.span`
 `;
 
+const Text = styled.p`
+`;
+
 export const ActionComponent = ({ title, icon, actions }: Props) => {
   return (
     <Section>
       <HeadLine icon={icon} title={title} />
-      {actions && actions.map((action) => {
+      {actions && actions.map((action, i) => {
         return (
-          <Contents>
+          <Contents key={i}>
             <StyledH3>{action.name}</StyledH3>
             <Information>{action.information}</Information>
             {
@@ -32,9 +35,9 @@ export const ActionComponent = ({ title, icon, actions }: Props) => {
             }
             {
               action.description &&
-              action.description.map((value) => {
+              action.description.map((value, j) => {
                 return (
-                  <p>{value}</p>
+                  <Text key={j}>{value}</Text>
                 );
               })
             }
