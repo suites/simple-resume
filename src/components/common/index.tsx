@@ -125,7 +125,6 @@ interface DateProps {
 }
 
 export const Date = ({ start, end }: DateProps) => {
-  console.log(start, end);
   return (
     <StyledTime>
       <time dateTime={start}>
