@@ -1,18 +1,14 @@
 import React from 'react';
+import Linkify from 'react-linkify';
 import styled from 'styled-components';
 import { Action } from '../../models';
-import { Date, HeadLine, Section, StyledH3 } from '../common';
+import { Contents, Date, HeadLine, Section, StyledH3 } from '../common';
 
 interface Props {
   title: string;
   icon: string;
   actions: Action[];
 }
-
-const Contents = styled.div`
-  padding: 1rem 0rem 1rem;
-  border-bottom: 1px solid #eeeeee;
-`;
 
 const Information = styled.span`
 `;
@@ -33,14 +29,16 @@ export const ActionComponent = ({ title, icon, actions }: Props) => {
               action.date &&
               <Date start={action.date.start} end={action.date.end} />
             }
-            {
-              action.description &&
-              action.description.map((value, j) => {
-                return (
-                  <Text key={j}>{value}</Text>
-                );
-              })
-            }
+            <Linkify>
+              {
+                action.description &&
+                action.description.map((value, j) => {
+                  return (
+                    <Text key={j}>{value}</Text>
+                  );
+                })
+              }
+            </Linkify>
           </Contents>
         );
       })}
