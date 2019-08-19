@@ -6,6 +6,7 @@ import Resume from '../models';
 import { ProgressBar } from './common';
 import './layout.css';
 import { ActionComponent, Careers, Profile, Skills } from './sections';
+import { About } from './sections/about';
 
 const Header = styled.div`
   position: fixed;
@@ -72,6 +73,7 @@ const Layout = () => {
         <ActionComponent icon='FaCodeBranch' title='Other Experiences' actions={resume.experiences} />
         <ActionComponent icon='FaUniversity' title='Education' actions={resume.educations} />
         <ActionComponent icon='FaIdCard' title='License' actions={resume.licenses} />
+        <About />
       </Container>
     </>
   );
