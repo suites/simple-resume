@@ -1,5 +1,5 @@
 <div align="middle">
-    <img src="https://github.com/suites/simple-resume/raw/master/public/static/simple-resume.png" height="500px">
+    <img src="https://github.com/suites/simple-resume/blob/master/static/simple-resume.png" height="500px">
 </div>
 
 <h1 align="center">🐤️ Simple-resume</h1>
@@ -16,7 +16,7 @@
 ## Overview
 Simple-resume은 React+Gatsby와 yaml을 통해 편리하고 빠르게 이력서를 작성 할 수 있습니다.
 <div align="middle">
-    <img src="https://github.com/suites/simple-resume/raw/master/public/static/profile-yaml.png">
+    <img src="https://github.com/suites/simple-resume/blob/master/static/profile-yaml.png">
 </div>
 
 ## Installation
