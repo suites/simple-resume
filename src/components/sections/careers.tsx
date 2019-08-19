@@ -8,18 +8,14 @@ const TechStack = ({ career }: { career: Career }) => {
     <>
       <StyledH5>{'Tech Stacks'}</StyledH5>
       <StyledUl>
-        <StyledLi>
-          <StyledUl>
-            {career.techStacks.map((techStack, i) => {
-              return (
-                <StyledLi key={i}>
-                  {`${techStack.name} : ${techStack.items.join(', ')}`}
-                </StyledLi>
-              );
-            })
-            }
-          </ StyledUl>
-        </StyledLi>
+        {career.techStacks.map((techStack, i) => {
+          return (
+            <StyledLi key={i}>
+              {`${techStack.name} : ${techStack.items.join(', ')}`}
+            </StyledLi>
+          );
+        })
+        }
       </StyledUl>
     </>
   );

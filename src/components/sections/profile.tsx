@@ -4,13 +4,13 @@ import styled from 'styled-components';
 import Resume from '../../models';
 import { ALink, FaIcon, Row, RowLeft, RowRight, Section, StyledH2, StyledLi, StyledUl } from '../common';
 
-const Contents = styled.div`
+const Sentence = styled.div`
 `;
 
 const Introduction = styled.div`
   padding: 2rem 0 0rem;
   border-bottom: 0px;
-  & > ${Contents} {
+  & > ${Sentence} {
     margin: 0 0 1rem 0;
     font-size: 2rem;
     line-height: 1.4;
@@ -92,7 +92,7 @@ export const Profile = () => {
       <Introduction>
         {
           resume.introduction.map((value, i) => {
-            return <Contents key={i}>{value}</Contents>;
+            return <Sentence key={i}>{value}</Sentence>;
           })
         }
       </Introduction>

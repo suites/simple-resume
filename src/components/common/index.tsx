@@ -33,10 +33,13 @@ export const HeadLine = ({ icon, title }: { icon: string, title: string }) => {
   );
 };
 
-export const Row = styled.div`
-  display: flex;
-  padding: 3rem 0;
+export const Contents = styled.div`
+  padding: 1rem 0rem 1rem;
   border-bottom: 1px solid #eeeeee;
+`;
+
+export const Row = styled(Contents)`
+  display: flex;
 `;
 
 export const RowLeft = styled.div`
@@ -90,12 +93,12 @@ export const StyledH3 = styled.h3`
 
 export const StyledH4 = styled.h4`
   font-size: 1.5rem;
-  margin: 0 0 1rem 0;
+  margin: 1rem 0 1rem 0;
 `;
 
 export const StyledH5 = styled.h5`
   font-size: 1.3rem;
-  margin: 0 0 0.5rem 0;
+  margin: 0.5rem 0 0.5rem 0;
   color: #333333;
 `;
 

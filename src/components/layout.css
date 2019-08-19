@@ -56,8 +56,13 @@ table {
   border-spacing: 0;
 }
 a {
-  color: blue;
+  color: #3a7bd5;
+  transition: color 0.3s ease;
 }
+a:hover {
+  color: #00d2ff;
+}
+
 * {
   box-sizing: border-box;
 }
