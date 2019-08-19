@@ -8,7 +8,7 @@ cover: "/"
 # 이력서 상단에 들어갈 사진과 이름, 간단 소개입니다.
 # A picture, name and brief introduction to the top of your resume.
 name: John Doe
-photo: "resumes/profile-example.jpg"
+photo: "resumes/chick.png"
 introduction:
   - Hello! I'm John Doe. I'm Software Engineer.
   - I enjoy playing games and eating. I'm happiest when I eat. I like pork.
